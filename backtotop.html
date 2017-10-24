@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style type="text/css">
+ .imgbox{
+ 	width: 1190px;
+ 	margin:0 auto;
+ }
+ #btn{
+ 	width: 40px;
+ 	height: 40px;
+ 	left: 50%;
+ 	position: fixed;
+ 	bottom: 20px;
+ 	margin-left: 610px;
+ 	background: url(top_bg.png) no-repeat left top;
+ }
+ #btn:hover {
+ 	background: url(top_bg.png) no-repeat 0 -39px;
+ }
+
+
+</style>
+</head>
+<body>
+	<div class="imgbox"><img src="tb_bg.jpg" alt=""></div>
+	<a href="#" id="btn"></a>
+		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+	    $(window).scroll(function () {
+	        if ($(window).scrollTop() >= 200) {
+	            $('#btn').fadeIn();
+	        }
+	        else {
+	            $('#btn').fadeOut();
+	        }
+	    });
+	});
+	$('#btn').click(function () {
+    $('html,body').animate({ scrollTop: 0 }, 500);
+});
+	
+	</script>
+</body>
+</html>
